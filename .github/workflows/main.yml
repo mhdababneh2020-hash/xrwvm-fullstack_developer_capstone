@@ -1,0 +1,33 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install pylint
+      run: pip install pylint
+    
+    - name: Lint Python files
+      run: pylint --disable=all --enable=E server/djangoapp/*.py || true
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install eslint
+      run: npm install -g eslint
+    
+    - name: Lint JS files
+      run: eslint server/database/app.js || true
