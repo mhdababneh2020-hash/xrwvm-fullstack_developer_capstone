@@ -2,17 +2,18 @@
 
 A full-stack web application for managing car dealership reviews, built as the capstone project for the IBM Full Stack Software Developer Professional Certificate.
 
-## Tech Stack
+## 🌐 Live Demo
+https://xrwvm-fullstack-developer-capstone-5gr5.onrender.com
 
+## Tech Stack
 - Frontend: React
 - Backend: Django (Python)
 - Microservice: Node.js + Express
-- Database: MongoDB
+- Database: MongoDB Atlas
 - Containerization: Docker
 - CI/CD: GitHub Actions
 
 ## Features
-
 - Browse car dealerships by state
 - View and submit customer reviews
 - Sentiment analysis on reviews
@@ -20,7 +21,6 @@ A full-stack web application for managing car dealership reviews, built as the c
 - Admin dashboard to manage dealers and cars
 
 ## Run Locally
-
 1. Clone the repo
 2. Run: docker-compose up
 
